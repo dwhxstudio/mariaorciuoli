@@ -18,43 +18,6 @@
  <marquee class="GeneratedMarquee" direction="left" scrollamount="15" behavior="scroll">WELCOME TO RANDOM! In my 30s, I don't know what's important. Inevitably, something entangles my imagination and I go with it...</marquee>
  <br>
  <body>
-  <script type="text/javascript">
-    // <![CDATA[
-    var speed=100; // speed colours change, 1 second = 1000
-    var delay=25; // how long to wait for each wipe
-    var alink="http://www.mf2fm.com/rv"; // page to link text to (set to ="" for no link)
-    
-    /****************************
-    *   Wipe Out Text Effect    *
-    *(c) 2003-6 mf2fm web-design*
-    *  http://www.mf2fm.com/rv  *
-    * DON'T EDIT BELOW THIS BOX *
-    ****************************/
-    var w_txt;
-    window.onload=function() { if (document.getElementById) {
-      var wiper=document.getElementById("wipe");
-      w_txt=wiper.firstChild.nodeValue;
-      while (wiper.childNodes.length) wiper.removeChild(wiper.childNodes[0]);
-      for (var i=0; i<w_txt.length; i++) {
-        var wipei=document.createElement("span");
-        wipei.setAttribute("id", "wipe"+i);
-        wipei.appendChild(document.createTextNode(w_txt.charAt(i)));
-        if (alink) {
-          wipei.style.cursor="pointer";
-          wipei.onclick=function() { top.location.href=alink; }
-        }
-        wiper.appendChild(wipei);
-      }
-      wipe(0);
-    }}
-    
-    function wipe(c) {
-      if (!c) for (var w=0; w<w_txt.length; w++) document.getElementById("wipe"+w).style.visibility="hidden";
-      else if (c<=w_txt.length) document.getElementById("wipe"+(c-1)).style.visibility="visible";
-      setTimeout("wipe("+(++c%(w_txt.length+delay))+")", speed);
-    }
-    // ]]>
-    </script>
   <style>.wavy-text{filter:url('#wavy')}</style>
   <h1 style="color :rgb(43, 0, 255);" class="wavy-text">Fresh Air</h1>
   <p style="font-family: 'Courier New', Courier, monospace;">Literally, 6 minutes of <a href="freshair.html" style="color: rgb(9, 9, 9);">fresh air collection.</a></p>
